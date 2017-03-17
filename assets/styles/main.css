@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.container {
+    margin: 0 auto 35px auto;
+    max-width: 960px;
+}
+
+header, section {
+    display: block;
+}
+header h1 {
+    margin: 10px 0;
+}
+section > ul {
+    margin-top: 0;
+}
+section > ul, section > ul li {
+    display: inline-block;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#test-wrapper ol {
+    margin-top: 0;
+}
+#test-wrapper ol li {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+}
+#test-wrapper .answer label {
+    cursor: pointer;
+}
+#test-wrapper .sentence {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#test-wrapper li.blank-field, .result-cell-blank-field {
+    background-color: #b0caff;
+    border: 1px solid #9f2e7b;
+    color: #9F2E7B;
+}
+#test-wrapper li.success, .result-cell-success {
+    background-color: #f5f2a0;
+    border: 1px solid #78ae42;
+    color: #78AE42;
+}
+#test-wrapper li.failure, .result-cell-failure {
+    background-color: #f5a0a0;
+    border: 1px solid #b90008;
+    color: #B90008;
+}
+#test-wrapper td {
+    padding-right: 15px;
+}
+#button-wrapper {
+    text-align: center;
+}
+#button-wrapper button {
+    cursor: pointer;
+    margin: 0 25px;
+}
+#button-wrapper td {
+    text-align: left;
+    padding: 0 0 0 15px;
+}
+#button-wrapper .result-cell {
+    padding: 0;
+    width: 25px;
+}
+#result ul {
+    margin-top: 5px;
+    margin-left: 0;
+}
+#result ul li {
+    list-style-type: none;
+}
+#result table {
+    margin: 15px auto 25px auto;
+}
+#result .resulting-value {
+    color: #78AE42;
+    font-size: 2em;
+    line-height: 2em;
+}
+.hidden {
+    display: none;
+}
