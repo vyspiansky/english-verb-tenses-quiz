@@ -93,9 +93,9 @@ $(function() {
     var accents = ['Simple', 'Continuous', 'Perfect', 'Perfect-Continuous'];
 
     var states = {
-        'blank-field': 'не вказано час',
-        'failure': 'неправильна відповідь',
-        'success': 'правильна відповідь'
+        'blank-field': 'not specified',
+        'failure': 'wrong answer',
+        'success': 'correct answer'
     };
 
     var $checkButton = $('#check');
@@ -131,18 +131,18 @@ $(function() {
         });
 
         if (blankFields.length) {
-            testResult += 'Не для всіх речень вказано час: ' + blankFields.join(', ') + '. Доробіть тест до кінця.';
+            testResult += 'Answers were not selected for the following questions: ' + blankFields.join(', ');
         } else {
             if (wrongAnswers.length) {
-                testResult += '<div class="resulting-value">' + correctAnswers.length + ' з ' + (correctAnswers.length + wrongAnswers.length ) + '</div>';
-                testResult += 'Для деяких речень вказано невірний час. Правильні часи для цих речень:';
+                testResult += '<div class="resulting-value">' + correctAnswers.length + ' of ' + (correctAnswers.length + wrongAnswers.length ) + '</div>';
+                testResult += 'Incorrect answers to some questions. Correct answers to these questions:';
                 testResult += '<ul>';
                 for (var j=0; j<correctFullAnswers.length; j++) {
                     testResult += '<li>' + wrongAnswers[j] + ' &mdash; ' + correctFullAnswers[j] + '</li>';
                 }
                 testResult += '</ul>';
             } else {
-                testResult += 'Молодець! Все вірно :)';
+                testResult += 'Well done! Everything is correct :)';
             }
         }
 
@@ -186,4 +186,8 @@ $(function() {
     });
 
     $createButton.click();
+
+    $('[name="lang"]').on('click', function() {
+        $createButton.click();
+    });
 });
